@@ -21,5 +21,6 @@ module.exports = {
     'quote-props': 0,
     'import/no-unresolved': 0,
     'max-len': 0,
+    'react/no-children-prop': 0,
   },
 };

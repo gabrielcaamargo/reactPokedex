@@ -1,11 +1,15 @@
+import { ChakraProvider } from '@chakra-ui/react';
+
 import PokemonArea from '../PokemonArea';
 import PokemonList from '../PokemonList';
 
 export default function App() {
   return (
-    <main>
-      <PokemonArea />
-      <PokemonList />
-    </main>
+    <ChakraProvider>
+      <main>
+        <PokemonArea />
+        <PokemonList />
+      </main>
+    </ChakraProvider>
   );
 }

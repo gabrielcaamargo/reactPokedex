@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 export default function PokemonArea() {
   return (
     <div className="w-full h-[500px] grid place-content-between grid-cols-2 bg-gradient-to-b from-orange-500 to-slate-900 px-12 py-4">
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center items-center">
         <h1 className="text-6xl font-sora font-bold">Charizard</h1>
         <div className="flex gap-2 items-center">
           <img src="src/assets/poke-types/fire.png" alt="" className="w-12" title="Fire" />
