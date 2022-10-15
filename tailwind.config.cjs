@@ -8,9 +8,10 @@ module.exports = {
       },
 
       screens: {
-        'mobilea': '370px',
+        'smallest': '370px',
         'mobile': '640px',
         'tablet': '768px',
+        'big-tablet': '968px',
         'laptop': '1024px',
         'desktop': '1280px',
       },
