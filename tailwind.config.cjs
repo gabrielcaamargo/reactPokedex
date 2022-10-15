@@ -6,6 +6,14 @@ module.exports = {
       fontFamily: {
         'sora': ['Sora', 'sans-serif'],
       },
+
+      screens: {
+        'mobilea': '370px',
+        'mobile': '640px',
+        'tablet': '768px',
+        'laptop': '1024px',
+        'desktop': '1280px',
+      },
     },
   },
   plugins: [],

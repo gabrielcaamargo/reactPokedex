@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Unused files (for a while)
+
+src/assets/poke-types/*

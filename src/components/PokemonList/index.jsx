@@ -1,7 +1,35 @@
 import { Input } from '@chakra-ui/react';
 import Pokemon from '../Pokemon';
 
-import PokemonType from '../../assets/poketypes';
+const pokemons = [
+  {
+    key: Math.random(),
+    img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/172.png',
+    name: 'Pichu',
+    type: ['Eletric'],
+  },
+
+  {
+    key: Math.random(),
+    img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png',
+    name: 'Pikachu',
+    type: ['Eletric'],
+  },
+
+  {
+    key: Math.random(),
+    img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png',
+    name: 'Raichu',
+    type: ['Eletric'],
+  },
+
+  {
+    key: Math.random(),
+    img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png',
+    name: 'Pidgey',
+    type: ['Flying', 'Normal'],
+  },
+];
 
 export default function PokemonList() {
   return (
@@ -14,21 +42,16 @@ export default function PokemonList() {
         <h2 className="text-3xl font-sora font-bold text-slate-500">All pokémon (1st generation)</h2>
 
         <div className="mt-6 grid grid-cols-4 gap-4 mb-8 w-full">
-          <Pokemon
-            img="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
-            name="Pikachu"
-            type={PokemonType.EletricType}
-            typeText="Eletric"
-          />
-
-          <Pokemon
-            img="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/18.png"
-            name="Pidgeot"
-            type={PokemonType.FlyingType}
-            typeText="Flying"
-            secondType={PokemonType.NormalType}
-            secondTypeText="Normal"
-          />
+          {pokemons.map(
+            (pokemon) => (
+              <Pokemon
+                key={pokemon.key}
+                img={pokemon.img}
+                name={pokemon.name}
+                types={pokemon.type}
+              />
+            ),
+          )}
         </div>
       </div>
     </main>

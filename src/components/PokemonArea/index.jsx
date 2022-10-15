@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 
 export default function PokemonArea() {
   return (
-    <div className="w-full h-[500px] grid place-content-between grid-cols-2 bg-gradient-to-b from-orange-500 to-slate-900 px-12 py-4">
+    <div className="w-full h-[500px] grid grid-cols-2 place-content-between bg-gradient-to-b from-orange-500 to-slate-900 px-12 py-4">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-6xl font-sora font-bold">Charizard</h1>
         <div className="flex gap-2 items-center">
@@ -20,7 +20,7 @@ export default function PokemonArea() {
           pagination={{ clickable: true }}
         >
           <SwiperSlide>
-            <img src="src/assets/mocks/charizard.png" alt="" />
+            <img src="src/assets/mocks/charizard.png" alt="Charizard" />
           </SwiperSlide>
 
           <SwiperSlide className="bg-slate-800 p-6 rounded-lg text-left">

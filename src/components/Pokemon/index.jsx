@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export default function Pokemon({
-  img, name, type, typeText, secondType, secondTypeText,
+  img, name, types,
 }) {
   return (
     <div className="bg-slate-800 rounded-lg flex flex-col items-center justify-center h-[300px] w-[288px]">
@@ -15,23 +15,10 @@ export default function Pokemon({
       >
         {name}
       </h3>
-      <div className="flex gap-1">
-        <img
-          src={type}
-          alt={typeText}
-          title={typeText}
-          className="w-12"
-        />
-        {
-          secondType && (
-            <img
-              src={secondType}
-              alt={secondTypeText}
-              className="w-12"
-              title={secondTypeText}
-            />
-          )
-        }
+
+      <div className="flex gap-1 mt-2">
+        <h2 className="font-bold font-sora">Types:</h2>
+        <p>{ Object.values(types).length > 1 ? Object.values(types).join(', ') : types }</p>
       </div>
     </div>
   );
@@ -40,13 +27,5 @@ export default function Pokemon({
 Pokemon.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  typeText: PropTypes.string.isRequired,
-  secondType: PropTypes.string,
-  secondTypeText: PropTypes.string,
-};
-
-Pokemon.defaultProps = {
-  secondType: null,
-  secondTypeText: null,
+  types: PropTypes.array.isRequired,
 };
