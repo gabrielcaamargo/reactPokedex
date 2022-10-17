@@ -24,5 +24,6 @@ module.exports = {
     'react/no-children-prop': 0,
     'import/no-extraneous-dependencies': 0,
     'react/forbid-prop-types': 'off',
+    'import/prefer-default-export': 0,
   },
 };

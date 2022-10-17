@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 
 export default function Pokemon({
-  img, name, types,
+  name,
 }) {
   return (
     <div className="bg-slate-800 rounded-lg flex flex-col items-center justify-center h-[300px] w-[288px]">
-      <img
+      {/* <img
         src={img}
         alt={name}
         className="w-[164px]"
-      />
+      /> */}
       <h3
         className="font-bold text-2xl"
       >
@@ -18,14 +18,12 @@ export default function Pokemon({
 
       <div className="flex gap-1 mt-2">
         <h2 className="font-bold font-sora">Types:</h2>
-        <p>{ Object.values(types).length > 1 ? Object.values(types).join(', ') : types }</p>
+        {/* <p>{ Object.values(types).length > 1 ? Object.values(types).join(', ') : types }</p> */}
       </div>
     </div>
   );
 }
 
 Pokemon.propTypes = {
-  img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  types: PropTypes.array.isRequired,
 };
