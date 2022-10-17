@@ -3,6 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import PokemonArea from '../PokemonArea';
 import PokemonList from '../PokemonList';
 
+import { AppContext } from '../../contexts/AppContext';
 import { PokemonContext } from '../../contexts/PokemonContext';
 
 export default function App() {
@@ -23,14 +24,18 @@ export default function App() {
     fetchApi();
   }, []);
 
+  const convertToCapitalizedString = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+
   return (
     <ChakraProvider>
-      <PokemonContext.Provider value={apiData}>
-        <main>
-          <PokemonArea />
-          <PokemonList />
-        </main>
-      </PokemonContext.Provider>
+      <AppContext.Provider value={convertToCapitalizedString}>
+        <PokemonContext.Provider value={apiData}>
+          <main>
+            <PokemonArea />
+            <PokemonList />
+          </main>
+        </PokemonContext.Provider>
+      </AppContext.Provider>
     </ChakraProvider>
   );
 }

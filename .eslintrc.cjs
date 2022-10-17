@@ -25,5 +25,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'react/forbid-prop-types': 'off',
     'import/prefer-default-export': 0,
+    'space-infix-ops': 0,
+    'react/jsx-no-constructed-context-values': 0,
   },
 };
